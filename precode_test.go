@@ -31,7 +31,6 @@ func TestMainHandlerWhenCityNotExist(t *testing.T) {
 
 	require.Equal(t, http.StatusBadRequest, responseRecorder.Code)
 	assert.Equal(t, "count missing", responseRecorder.Body.String())
-
 }
 
 func TestMainHandler(t *testing.T) {
@@ -43,5 +42,4 @@ func TestMainHandler(t *testing.T) {
 
 	require.Equal(t, http.StatusOK, responseRecorder.Code)
 	assert.NotEmpty(t, responseRecorder.Body)
-
 }
